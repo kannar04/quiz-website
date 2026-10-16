@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Website tự luyện 320 câu hỏi Kế hoạch bảo trì cảng hàng không, sân bay.">
+  <title>Kiểm tra kiến thức — Bảo trì cảng hàng không, sân bay</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="container py-4 py-md-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-9 col-xl-8">
+        <section id="welcome-screen" class="screen" aria-labelledby="welcome-title">
+          <div class="content-card welcome-card text-center">
+            <span class="eyebrow">NGÂN HÀNG CÂU HỎI ÔN TẬP</span>
+            <h1 id="welcome-title">KIỂM TRA KIẾN THỨC</h1>
+            <p class="lead mb-0">Kế hoạch bảo trì cảng hàng không, sân bay</p>
+            <div class="welcome-divider" aria-hidden="true"></div>
+            <div class="row facts text-left" aria-label="Thông tin bài kiểm tra">
+              <div class="col-12 col-sm-6"><span class="fact-mark">01</span><span>Tổng số <strong>320 câu hỏi</strong></span></div>
+              <div class="col-12 col-sm-6"><span class="fact-mark">02</span><span>Trắc nghiệm <strong>4 đáp án</strong></span></div>
+              <div class="col-12 col-sm-6"><span class="fact-mark">03</span><span>Tối đa <strong>2 lượt trả lời</strong></span></div>
+              <div class="col-12 col-sm-6"><span class="fact-mark">04</span><span>Phản hồi <strong>ngay lập tức</strong></span></div>
+            </div>
+            <button id="start-button" class="btn btn-primary btn-lg action-button" type="button">BẮT ĐẦU KIỂM TRA <span aria-hidden="true">→</span></button>
+          </div>
+        </section>
+
+        <section id="quiz-screen" class="screen d-none" aria-labelledby="question-text">
+          <div class="quiz-meta">
+            <div class="d-flex justify-content-between align-items-end mb-2">
+              <div><span class="meta-label">TIẾN ĐỘ</span><strong id="progress-text">1 / 320</strong></div>
+              <div class="text-right"><span class="meta-label">ĐÚNG</span><strong id="correct-count">0</strong></div>
+            </div>
+            <div class="progress" aria-label="Tiến độ bài kiểm tra">
+              <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%" aria-valuemin="0" aria-valuemax="320" aria-valuenow="0"></div>
+            </div>
+          </div>
+
+          <article id="question-card" class="content-card question-card">
+            <div class="question-topline">
+              <span id="question-number" class="question-number">CÂU 1 / 320</span>
+              <span id="question-level" class="level-badge">CẤP ĐỘ 2</span>
+            </div>
+            <p id="question-chapter" class="chapter-label"></p>
+            <h2 id="question-text" tabindex="-1"></h2>
+            <div id="answers" class="answers" role="group" aria-label="Các phương án trả lời"></div>
+            <div id="feedback" class="feedback d-none" role="status" aria-live="polite"></div>
+            <div id="explanation" class="explanation d-none">
+              <p id="correct-answer-line" class="correct-answer-line"></p>
+              <h3>Giải thích</h3>
+              <p id="explanation-text" class="mb-0"></p>
+            </div>
+            <div class="text-right">
+              <button id="next-button" class="btn btn-primary action-button d-none" type="button">CÂU TIẾP THEO <span aria-hidden="true">→</span></button>
+            </div>
+          </article>
+        </section>
+
+        <section id="result-screen" class="screen d-none" aria-labelledby="result-title">
+          <div class="content-card result-card text-center">
+            <span class="eyebrow">ĐÃ HOÀN TẤT 320 CÂU</span>
+            <h1 id="result-title">HOÀN THÀNH BÀI KIỂM TRA</h1>
+            <div class="score-ring" aria-label="Điểm số">
+              <strong id="result-score">0 / 320</strong>
+              <span>Số câu trả lời đúng</span>
+            </div>
+            <p class="result-percentage">Tỷ lệ chính xác: <strong id="result-percentage">0.00%</strong></p>
+            <div class="result-breakdown">
+              <span>Đúng: <strong id="result-correct">0 câu</strong></span>
+              <span>Sai: <strong id="result-wrong">320 câu</strong></span>
+            </div>
+            <button id="restart-button" class="btn btn-primary btn-lg action-button" type="button">LÀM LẠI <span aria-hidden="true">↻</span></button>
+          </div>
+        </section>
+
+        <p id="data-error" class="alert alert-danger d-none" role="alert"></p>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/questions.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
